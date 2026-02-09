@@ -1,0 +1,139 @@
+{
+  "id": "demo-product-launch",
+  "meta": {
+    "title": "Product Launch Demo",
+    "theme": "light",
+    "device": "iphone",
+    "language": "pt-BR"
+  },
+  "contact": {
+    "name": "Sarah do Suporte",
+    "avatar": "",
+    "status": "online",
+    "isVerified": true
+  },
+  "messages": [
+    {
+      "id": "msg-1",
+      "type": "received",
+      "contentType": "text",
+      "text": "Olá! Bem-vindo à nossa loja. Como posso ajudar? 😊",
+      "timestamp": "10:30",
+      "delay": 800,
+      "showTyping": true,
+      "typingDuration": 2000
+    },
+    {
+      "id": "msg-2",
+      "type": "sent",
+      "contentType": "text",
+      "text": "Oi! Quero saber sobre os novos produtos",
+      "timestamp": "10:31",
+      "delay": 2500,
+      "status": "read",
+      "statusTransitions": [
+        { "status": "sent", "delay": 0 },
+        { "status": "delivered", "delay": 400 },
+        { "status": "read", "delay": 1200 }
+      ]
+    },
+    {
+      "id": "msg-3",
+      "type": "received",
+      "contentType": "text",
+      "text": "Claro! Acabamos de lançar nossa nova linha de produtos premium. Temos várias opções incríveis!",
+      "timestamp": "10:31",
+      "delay": 1500,
+      "showTyping": true,
+      "typingDuration": 2800
+    },
+    {
+      "id": "msg-4",
+      "type": "received",
+      "contentType": "text",
+      "text": "Posso te enviar o catálogo completo. Qual categoria te interessa mais?",
+      "timestamp": "10:32",
+      "delay": 800,
+      "showTyping": true,
+      "typingDuration": 1800
+    },
+    {
+      "id": "msg-5",
+      "type": "sent",
+      "contentType": "text",
+      "text": "Eletrônicos, por favor!",
+      "timestamp": "10:32",
+      "delay": 3000,
+      "status": "read",
+      "statusTransitions": [
+        { "status": "sent", "delay": 0 },
+        { "status": "delivered", "delay": 300 },
+        { "status": "read", "delay": 600 }
+      ]
+    },
+    {
+      "id": "msg-6",
+      "type": "received",
+      "contentType": "text",
+      "text": "Ótima escolha! Nossos destaques são:\n\n📱 Smartphone X Pro - R$ 2.499\n💻 Notebook Ultra Slim - R$ 4.999\n🎧 Fones Wireless Pro - R$ 599\n\nTodos com frete grátis e 12x sem juros!",
+      "timestamp": "10:33",
+      "delay": 1800,
+      "showTyping": true,
+      "typingDuration": 3500
+    },
+    {
+      "id": "msg-7",
+      "type": "sent",
+      "contentType": "text",
+      "text": "O Smartphone X Pro parece incrível! Tem todas as cores?",
+      "timestamp": "10:34",
+      "delay": 4000,
+      "status": "read",
+      "statusTransitions": [
+        { "status": "sent", "delay": 0 },
+        { "status": "delivered", "delay": 350 },
+        { "status": "read", "delay": 900 }
+      ]
+    },
+    {
+      "id": "msg-8",
+      "type": "received",
+      "contentType": "text",
+      "text": "Sim! Disponível em Preto, Branco e Azul Oceano. Quer que eu reserve um pra você? 🎉",
+      "timestamp": "10:34",
+      "delay": 1200,
+      "showTyping": true,
+      "typingDuration": 2200
+    },
+    {
+      "id": "msg-9",
+      "type": "sent",
+      "contentType": "text",
+      "text": "Sim, quero o Azul Oceano! Como faço para comprar?",
+      "timestamp": "10:35",
+      "delay": 2800,
+      "status": "read",
+      "statusTransitions": [
+        { "status": "sent", "delay": 0 },
+        { "status": "delivered", "delay": 300 },
+        { "status": "read", "delay": 700 }
+      ]
+    },
+    {
+      "id": "msg-10",
+      "type": "received",
+      "contentType": "text",
+      "text": "Perfeito! Vou te enviar o link de pagamento seguro agora mesmo. Obrigada pela preferência! 💚",
+      "timestamp": "10:35",
+      "delay": 1000,
+      "showTyping": true,
+      "typingDuration": 2500
+    }
+  ],
+  "settings": {
+    "autoPlay": true,
+    "speed": 1,
+    "loop": true,
+    "loopDelay": 4000
+  }
+}

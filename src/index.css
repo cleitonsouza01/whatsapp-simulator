@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --color-wa-bg: #efeae2;
+  --color-wa-bg-pattern: #d1d7db;
+  --color-wa-bubble-sent: #d9fdd3;
+  --color-wa-bubble-received: #ffffff;
+  --color-wa-header: #008069;
+  --color-wa-header-dark: #00654f;
+  --color-wa-text-primary: #111b21;
+  --color-wa-text-secondary: #667781;
+  --color-wa-timestamp: #667781;
+  --color-wa-tick-gray: #667781;
+  --color-wa-tick-blue: #53bdeb;
+  --color-wa-online: #25d366;
+  --color-wa-input-bg: #f0f2f5;
+  --color-wa-divider: #e9edef;
+  --color-wa-typing-bg: #ffffff;
+  --color-wa-green-icon: #008069;
+  --font-wa: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+.wa-chat-bg {
+  background-color: var(--color-wa-bg);
+  background-image: url("data:image/svg+xml,%3Csvg width='300' height='300' viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23d1d7db' fill-opacity='0.15'%3E%3Cpath d='M30 10c2 0 3.5 1.5 3.5 3.5S32 17 30 17s-3.5-1.5-3.5-3.5S28 10 30 10zm0 0'/%3E%3Cpath d='M60 40c1.5 0 2.5 1 2.5 2.5S61.5 45 60 45s-2.5-1-2.5-2.5S58.5 40 60 40zm0 0'/%3E%3Cpath d='M15 55l5-3 5 3v6l-5 3-5-3z'/%3E%3Cpath d='M80 20l3-2h4l3 2v4l-3 2h-4l-3-2z'/%3E%3Ccircle cx='150' cy='80' r='2'/%3E%3Ccircle cx='200' cy='30' r='1.5'/%3E%3Cpath d='M120 50l4 4-4 4-4-4z'/%3E%3Cpath d='M250 60c1 0 2 1 2 2s-1 2-2 2-2-1-2-2 1-2 2-2z'/%3E%3Ccircle cx='40' cy='120' r='2'/%3E%3Cpath d='M180 100l3-2 3 2v3l-3 2-3-2z'/%3E%3Ccircle cx='100' cy='140' r='1.5'/%3E%3Cpath d='M220 130l2 3h-4z'/%3E%3Ccircle cx='270' cy='110' r='2'/%3E%3Cpath d='M50 180c1.5 0 3 1.5 3 3s-1.5 3-3 3-3-1.5-3-3 1.5-3 3-3z'/%3E%3Cpath d='M140 170l3 2v4l-3 2-3-2v-4z'/%3E%3Ccircle cx='200' cy='190' r='1.5'/%3E%3Cpath d='M260 170l2 2-2 2-2-2z'/%3E%3Ccircle cx='20' cy='240' r='2'/%3E%3Cpath d='M90 220l4-3 4 3v5l-4 3-4-3z'/%3E%3Ccircle cx='170' cy='250' r='2'/%3E%3Cpath d='M240 230l3 2v3l-3 2-3-2v-3z'/%3E%3Ccircle cx='290' cy='210' r='1.5'/%3E%3Cpath d='M70 280c1 0 2 1 2 2s-1 2-2 2-2-1-2-2 1-2 2-2z'/%3E%3Ccircle cx='130' cy='290' r='1.5'/%3E%3Cpath d='M210 275l3 3-3 3-3-3z'/%3E%3Ccircle cx='280' cy='270' r='2'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+@keyframes typing-bounce {
+  0%, 60%, 100% { transform: translateY(0); }
+  30% { transform: translateY(-4px); }
+}
+
+.typing-dot {
+  animation: typing-bounce 1.4s ease-in-out infinite;
+}
+.typing-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.typing-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.wa-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.wa-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.wa-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.phone-shadow {
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.1),
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: var(--font-wa);
+}

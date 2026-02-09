@@ -1,0 +1,115 @@
+{
+  "id": "demo-customer-support",
+  "meta": {
+    "title": "Customer Support Demo",
+    "theme": "light",
+    "device": "android",
+    "language": "en"
+  },
+  "contact": {
+    "name": "TechStore Support",
+    "avatar": "",
+    "status": "online",
+    "isVerified": true
+  },
+  "messages": [
+    {
+      "id": "cs-1",
+      "type": "received",
+      "contentType": "text",
+      "text": "Hello! Welcome to TechStore Support. I'm here to help you with any questions. 👋",
+      "timestamp": "14:00",
+      "delay": 600,
+      "showTyping": true,
+      "typingDuration": 1800
+    },
+    {
+      "id": "cs-2",
+      "type": "sent",
+      "contentType": "text",
+      "text": "Hi! I placed an order 3 days ago and haven't received any tracking info yet.",
+      "timestamp": "14:01",
+      "delay": 3000,
+      "status": "read",
+      "statusTransitions": [
+        { "status": "sent", "delay": 0 },
+        { "status": "delivered", "delay": 400 },
+        { "status": "read", "delay": 800 }
+      ]
+    },
+    {
+      "id": "cs-3",
+      "type": "received",
+      "contentType": "text",
+      "text": "I understand your concern! Let me look that up for you right away. Could you share your order number?",
+      "timestamp": "14:01",
+      "delay": 1500,
+      "showTyping": true,
+      "typingDuration": 2500
+    },
+    {
+      "id": "cs-4",
+      "type": "sent",
+      "contentType": "text",
+      "text": "Sure, it's #TS-2024-78432",
+      "timestamp": "14:02",
+      "delay": 2000,
+      "status": "read",
+      "statusTransitions": [
+        { "status": "sent", "delay": 0 },
+        { "status": "delivered", "delay": 300 },
+        { "status": "read", "delay": 600 }
+      ]
+    },
+    {
+      "id": "cs-5",
+      "type": "received",
+      "contentType": "text",
+      "text": "Found it! Your order was shipped yesterday and is currently in transit. Here's your tracking number: *BR4521789630*",
+      "timestamp": "14:03",
+      "delay": 2000,
+      "showTyping": true,
+      "typingDuration": 3000
+    },
+    {
+      "id": "cs-6",
+      "type": "received",
+      "contentType": "text",
+      "text": "Estimated delivery: Tomorrow by 6 PM. You'll receive a notification when it's out for delivery! 📦",
+      "timestamp": "14:03",
+      "delay": 800,
+      "showTyping": true,
+      "typingDuration": 1800
+    },
+    {
+      "id": "cs-7",
+      "type": "sent",
+      "contentType": "text",
+      "text": "That's great news! Thank you so much for the quick help! 🙏",
+      "timestamp": "14:04",
+      "delay": 2500,
+      "status": "read",
+      "statusTransitions": [
+        { "status": "sent", "delay": 0 },
+        { "status": "delivered", "delay": 350 },
+        { "status": "read", "delay": 700 }
+      ]
+    },
+    {
+      "id": "cs-8",
+      "type": "received",
+      "contentType": "text",
+      "text": "You're welcome! Is there anything else I can help you with? 😊",
+      "timestamp": "14:04",
+      "delay": 1000,
+      "showTyping": true,
+      "typingDuration": 1500
+    }
+  ],
+  "settings": {
+    "autoPlay": true,
+    "speed": 1,
+    "loop": true,
+    "loopDelay": 3000
+  }
+}
