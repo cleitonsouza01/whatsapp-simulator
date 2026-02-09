@@ -50,6 +50,21 @@ function App() {
     return () => window.removeEventListener('keydown', handleKeyDown)
   }, [handleKeyDown])
 
+  // Carousel: auto-advance to next conversation after 10s pause
+  useEffect(() => {
+    if (playbackState !== 'complete') return
+
+    const timer = setTimeout(() => {
+      if (conversations.length <= 1) {
+        restart()
+      } else {
+        selectConversation((activeIndex + 1) % conversations.length)
+      }
+    }, 10000)
+
+    return () => clearTimeout(timer)
+  }, [playbackState, activeIndex, conversations.length, selectConversation, restart])
+
   if (!activeConversation) {
     return <div className="flex items-center justify-center h-screen text-gray-500">No conversations loaded</div>
   }

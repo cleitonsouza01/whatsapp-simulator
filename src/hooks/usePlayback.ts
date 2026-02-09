@@ -48,8 +48,7 @@ export function usePlayback(conversation: Conversation | null): UsePlaybackRetur
 
     engine.configure(conversation.messages, {
       speed: conversation.settings.speed,
-      loop: conversation.settings.loop,
-      loopDelay: conversation.settings.loopDelay,
+      loop: false,
     })
     setSpeedState(conversation.settings.speed)
 

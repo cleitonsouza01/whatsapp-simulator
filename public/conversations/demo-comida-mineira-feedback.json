@@ -1,13 +1,13 @@
 {
   "id": "demo-comida-mineira-feedback",
   "meta": {
-    "title": "Comida Mineira - Feedback Juçara",
+    "title": "Reclamação de Pedido",
     "theme": "light",
     "device": "iphone",
     "language": "pt-BR"
   },
   "contact": {
-    "name": "Comida Mineira e BomBurguerUS",
+    "name": "Sabor Mineiro Grill",
     "avatar": "",
     "status": "online",
     "isVerified": true
@@ -31,7 +31,7 @@
       "id": "jf-2",
       "type": "received",
       "contentType": "text",
-      "text": "Olá, Juçara! Boa noite! 👋",
+      "text": "Olá, Patrícia! Boa noite! 👋",
       "timestamp": "20:08",
       "delay": 2000,
       "showTyping": true,
@@ -85,7 +85,7 @@
       "id": "jf-7",
       "type": "received",
       "contentType": "text",
-      "text": "Poxa, Juçara, sinto muito que não esteja bem. Melhoras rápidas pra você! 🙏 Cuide-se direitinho.",
+      "text": "Poxa, Patrícia, sinto muito que não esteja bem. Melhoras rápidas pra você! 🙏 Cuide-se direitinho.",
       "timestamp": "20:10",
       "delay": 2000,
       "showTyping": true,
@@ -129,7 +129,7 @@
       "id": "jf-11",
       "type": "received",
       "contentType": "text",
-      "text": "De nada, Juçara! Boa noite e descanse bastante. Melhoras! ✨",
+      "text": "De nada, Patrícia! Boa noite e descanse bastante. Melhoras! ✨",
       "timestamp": "20:11",
       "delay": 1200,
       "showTyping": true,
