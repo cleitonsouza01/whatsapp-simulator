@@ -98,6 +98,23 @@ export class PlaybackEngine {
     this.setState('idle')
   }
 
+  showAll() {
+    this.clearTimers()
+    this.emit({ type: 'typing-end' })
+    for (let i = this.currentIndex; i < this.messages.length; i++) {
+      const message = this.messages[i]
+      this.emit({ type: 'message', message, index: i })
+      if (message.statusTransitions) {
+        const finalStatus = message.statusTransitions[message.statusTransitions.length - 1]
+        if (finalStatus) {
+          this.emit({ type: 'status-change', messageId: message.id, status: finalStatus.status })
+        }
+      }
+    }
+    this.currentIndex = this.messages.length
+    this.setState('complete')
+  }
+
   dispose() {
     this.clearTimers()
     this.listeners.clear()

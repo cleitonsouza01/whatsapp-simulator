@@ -1,4 +1,4 @@
-import { Play, Pause, RotateCcw } from 'lucide-react'
+import { Play, Pause, RotateCcw, SkipForward } from 'lucide-react'
 import type { PlaybackState } from '../../types/conversation'
 
 interface PlaybackControlsProps {
@@ -7,6 +7,7 @@ interface PlaybackControlsProps {
   onPlay: () => void
   onPause: () => void
   onRestart: () => void
+  onShowAll: () => void
   onSpeedChange: (speed: number) => void
 }
 
@@ -18,6 +19,7 @@ export function PlaybackControls({
   onPlay,
   onPause,
   onRestart,
+  onShowAll,
   onSpeedChange,
 }: PlaybackControlsProps) {
   const isPlaying = state === 'playing'
@@ -40,6 +42,15 @@ export function PlaybackControls({
         title="Restart"
       >
         <RotateCcw size={18} />
+      </button>
+
+      {/* Show All */}
+      <button
+        onClick={onShowAll}
+        className="w-10 h-10 rounded-full bg-gray-200 text-gray-700 flex items-center justify-center hover:bg-gray-300 transition-colors"
+        title="Mostrar tudo"
+      >
+        <SkipForward size={18} />
       </button>
 
       {/* Speed selector */}

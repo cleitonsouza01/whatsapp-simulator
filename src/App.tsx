@@ -20,6 +20,7 @@ function App() {
     play,
     pause,
     restart,
+    showAll,
     setSpeed,
   } = usePlayback(activeConversation)
 
@@ -73,6 +74,7 @@ function App() {
         onPlay={play}
         onPause={pause}
         onRestart={restart}
+        onShowAll={showAll}
         onSpeedChange={setSpeed}
       />
 

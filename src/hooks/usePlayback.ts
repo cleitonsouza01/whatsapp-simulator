@@ -13,6 +13,7 @@ interface UsePlaybackReturn {
   play: () => void
   pause: () => void
   restart: () => void
+  showAll: () => void
   setSpeed: (speed: number) => void
 }
 
@@ -117,6 +118,10 @@ export function usePlayback(conversation: Conversation | null): UsePlaybackRetur
     }, 100)
   }, [])
 
+  const showAll = useCallback(() => {
+    engineRef.current?.showAll()
+  }, [])
+
   const setSpeed = useCallback((newSpeed: number) => {
     setSpeedState(newSpeed)
     engineRef.current?.setSpeed(newSpeed)
@@ -133,6 +138,7 @@ export function usePlayback(conversation: Conversation | null): UsePlaybackRetur
     play,
     pause,
     restart,
+    showAll,
     setSpeed,
   }
 }
