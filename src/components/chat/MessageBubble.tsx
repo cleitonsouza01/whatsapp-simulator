@@ -4,13 +4,25 @@ import type { Message, MessageDeliveryStatus } from '../../types/conversation'
 import { MessageStatus } from './MessageStatus'
 import { messageBubbleVariants } from '../../styles/animations'
 
-function formatWhatsAppText(text: string): ReactNode {
-  const parts = text.split(/(\*[^*]+\*)/)
-  return parts.map((part, i) => {
+const URL_RE = /(https?:\/\/[^\s]+)/
+const BOLD_RE = /(\*[^*]+\*)/
+
+function formatBold(text: string, keyPrefix: string): ReactNode[] {
+  return text.split(BOLD_RE).map((part, i) => {
     if (part.startsWith('*') && part.endsWith('*')) {
-      return <strong key={i} className="font-bold">{part.slice(1, -1)}</strong>
+      return <strong key={`${keyPrefix}-b${i}`} className="font-bold">{part.slice(1, -1)}</strong>
     }
     return part
+  })
+}
+
+function formatWhatsAppText(text: string): ReactNode {
+  const parts = text.split(URL_RE)
+  return parts.map((part, i) => {
+    if (URL_RE.test(part)) {
+      return <span key={`u${i}`} className="text-[#027eb5] underline">{part}</span>
+    }
+    return formatBold(part, `p${i}`)
   })
 }
 
