@@ -1,7 +1,18 @@
 import { motion } from 'framer-motion'
+import type { ReactNode } from 'react'
 import type { Message, MessageDeliveryStatus } from '../../types/conversation'
 import { MessageStatus } from './MessageStatus'
 import { messageBubbleVariants } from '../../styles/animations'
+
+function formatWhatsAppText(text: string): ReactNode {
+  const parts = text.split(/(\*[^*]+\*)/)
+  return parts.map((part, i) => {
+    if (part.startsWith('*') && part.endsWith('*')) {
+      return <strong key={i} className="font-bold">{part.slice(1, -1)}</strong>
+    }
+    return part
+  })
+}
 
 interface MessageBubbleProps {
   message: Message
@@ -64,7 +75,7 @@ export function MessageBubble({ message, showTail, currentStatus }: MessageBubbl
             className="text-wa-text-primary whitespace-pre-wrap break-words"
             style={{ fontSize: '14.2px', lineHeight: '19px' }}
           >
-            {message.text}
+            {formatWhatsAppText(message.text)}
           </span>
 
           {/* Timestamp + status */}
