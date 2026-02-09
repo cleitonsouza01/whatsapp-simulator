@@ -3,7 +3,7 @@ import type { Conversation } from '../types/conversation'
 export const demoProductLaunch: Conversation = {
   id: 'demo-product-launch',
   meta: {
-    title: 'Smartphone Purchase',
+    title: 'Compra de Smartphone',
     theme: 'light',
     device: 'iphone',
     language: 'pt-BR',
@@ -143,7 +143,7 @@ export const demoProductLaunch: Conversation = {
 export const demoCustomerSupport: Conversation = {
   id: 'demo-customer-support',
   meta: {
-    title: 'Order Tracking',
+    title: 'Rastreio de Pedido',
     theme: 'light',
     device: 'android',
     language: 'en',
@@ -259,7 +259,7 @@ export const demoCustomerSupport: Conversation = {
 export const demoDiverseCare: Conversation = {
   id: 'demo-diverse-care',
   meta: {
-    title: 'Medication Tracking',
+    title: 'Rastreio de Medicação',
     theme: 'light',
     device: 'iphone',
     language: 'pt-BR',
@@ -415,7 +415,7 @@ export const demoDiverseCare: Conversation = {
 export const demoComidaMineira: Conversation = {
   id: 'demo-comida-mineira',
   meta: {
-    title: 'Light Meal Suggestions',
+    title: 'Refeição Leve',
     theme: 'light',
     device: 'iphone',
     language: 'pt-BR',
@@ -615,7 +615,7 @@ export const demoComidaMineira: Conversation = {
 export const demoComidaMineiraOrder: Conversation = {
   id: 'demo-comida-mineira-order',
   meta: {
-    title: 'Food Order & Payment',
+    title: 'Pedido e Pagamento',
     theme: 'light',
     device: 'iphone',
     language: 'pt-BR',
@@ -755,7 +755,7 @@ export const demoComidaMineiraOrder: Conversation = {
 export const demoComidaMineiraFeedback: Conversation = {
   id: 'demo-comida-mineira-feedback',
   meta: {
-    title: 'Order Quality Complaint',
+    title: 'Reclamação de Pedido',
     theme: 'light',
     device: 'iphone',
     language: 'pt-BR',
